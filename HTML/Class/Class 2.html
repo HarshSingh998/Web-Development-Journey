@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Form</title>
+</head>
+
+<body>
+
+
+    <!-- 
+        if i write method="GET" the password visible in the url but
+        if we write method="POST" then in this case the paswword not visible on the url link 
+    -->
+
+    <!--
+        GET: form data is added to the URL.
+        POST: form data is sent in the request body,
+        so it is not displayed in the URL.
+    -->
+
+    <form action="./Class 1.html" method="get">
+
+        <label for="Harsh">Enter Password</label>
+
+        <input
+            type="password"
+            id="Harsh"
+            name="Harsh"
+            required
+            placeholder="ENTER PASSWORD"
+            minlength="3"
+        >
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+</html>
