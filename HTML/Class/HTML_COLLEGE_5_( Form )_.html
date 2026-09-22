@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hobby, Dropdown and File Form</title>
+</head>
+
+<body>
+
+    <h1>Student Registration Form</h1>
+
+    <form>
+
+        <!-- ==================== HOBBY ==================== -->
+
+        <h2>1. Select Your Hobbies</h2>
+
+        <p>You can select more than one hobby:</p>
+
+        <input type="checkbox" id="coding" name="hobby" value="coding">
+        <label for="coding">Coding</label>
+        <br>
+
+        <input type="checkbox" id="gaming" name="hobby" value="gaming">
+        <label for="gaming">Gaming</label>
+        <br>
+
+        <input type="checkbox" id="reading" name="hobby" value="reading">
+        <label for="reading">Reading</label>
+        <br>
+
+        <input type="checkbox" id="music" name="hobby" value="music">
+        <label for="music">Music</label>
+        <br>
+
+        <input type="checkbox" id="sports" name="hobby" value="sports">
+        <label for="sports">Sports</label>
+
+
+        <!-- ==================== DROPDOWN ==================== -->
+
+        <h2>2. Select Your City</h2>
+
+        <label for="city">Choose City:</label>
+
+        <select id="city" name="city">
+
+            <option value="">-- Select Your City --</option>
+
+            <option value="indore">Indore</option>
+
+            <option value="delhi">Delhi</option>
+
+            <option value="mumbai">Mumbai</option>
+
+            <option value="pune">Pune</option>
+
+            <option value="bangalore">Bangalore</option>
+
+        </select>
+
+
+        <!-- ==================== FILE UPLOAD ==================== -->
+
+        <h2>3. Upload Your Photo</h2>
+
+        <label for="photo">Choose Photo:</label>
+
+        <input
+            type="file"
+            id="photo"
+            name="photo"
+            accept="image/*"
+        >
+
+
+        <!-- ==================== PDF FILE ==================== -->
+
+        <h2>4. Upload Your Document</h2>
+
+        <label for="document">Choose PDF:</label>
+
+        <input
+            type="file"
+            id="document"
+            name="document"
+            accept=".pdf"
+        >
+
+
+        <!-- ==================== SUBMIT ==================== -->
+
+        <br><br>
+
+        <input type="submit" value="Submit">
+
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+
+</html>
+
