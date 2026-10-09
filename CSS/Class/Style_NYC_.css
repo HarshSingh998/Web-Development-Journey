@@ -262,6 +262,7 @@ CSS comments likhne ka syntax:
 
 /* This is a comment */
 
+/*
 Comments browser mein styling apply nahi karte.
 Ye notes aur code ko samajhne ke liye hote hain.
 */
@@ -1115,6 +1116,7 @@ Example:
 }
 */
 
+/*
 Commented-out code browser mein apply nahi hota.
 
 Agar kisi example ko run karna hai, uske surrounding comment
