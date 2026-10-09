@@ -1,0 +1,1828 @@
+
+/*
+================================================================
+                 CSS COMPLETE NOTES
+           BEGINNER TO ADVANCED LEVEL
+================================================================
+
+CSS = Cascading Style Sheets
+
+HTML       -> Structure
+CSS        -> Design / Styling
+JavaScript -> Functionality
+
+IMPORTANT:
+Is file mein pehle original classroom code hai.
+Uske baad explanations aur extra practice examples hain.
+
+================================================================
+*/
+
+
+/*
+================================================================
+PART 1: YOUR TEACHER'S CSS CODE
+================================================================
+
+Neeche tumhare bheje hue code ko same order mein rakha hai.
+Missing closing brace fix ki gayi hai.
+*/
+
+
+/* CSS SELECTORS: BY TAG NAME */
+
+h1 {
+    color: brown;
+    background: black;
+}
+
+
+/* CSS SELECTORS: BY ID NAME */
+
+#heading {
+    color: red;
+    background: yellow;
+}
+
+
+/* CSS SELECTORS: BY CLASS NAME */
+
+.heading {
+    color: green;
+    background: blue;
+}
+
+
+/* FONT SIZE UNITS: px, em, rem, %, vw, vh */
+
+/* Parent font size */
+body {
+    font-size: 200%;
+}
+
+/* Root element font size */
+html {
+    font-size: 40px;
+}
+
+
+/* FONT FAMILY, COLOR, TEXT AND LETTER SPACING */
+
+h2 {
+    color: crimson;
+    font-size: 100px;
+    letter-spacing: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+}
+
+
+/* BACKGROUND, PADDING AND HEIGHT */
+
+div {
+    background-color: aquamarine;
+    padding: 50px;
+    height: 100px;
+}
+
+
+/* UNIVERSAL SELECTOR */
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/* BOX-SIZING */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+/* ANOTHER H1 EXAMPLE FROM YOUR CODE */
+
+h1 {
+    color: crimson;
+    font-size: 100px;
+    letter-spacing: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+}
+
+
+/* OLD .div EXAMPLE — COMMENTED OUT */
+
+/*
+.div {
+    background-color: rgb(146, 108, 50);
+    height: 100%;
+    padding: 100px;
+}
+*/
+
+
+/* HTML AND BODY HEIGHT */
+
+html,
+body {
+    height: 100%;
+}
+
+
+/* INLINE EXAMPLE — COMMENTED OUT */
+
+/*
+.first {
+    background-color: aquamarine;
+    height: 50%;
+    width: 50%;
+    display: inline;
+}
+*/
+
+
+/* INLINE-BLOCK EXAMPLE — COMMENTED OUT */
+
+/*
+.first {
+    background-color: aquamarine;
+    height: 50%;
+    width: 49%;
+    display: inline-block;
+}
+*/
+
+
+/* SECOND BOX EXAMPLE — COMMENTED OUT */
+
+/*
+.second {
+    background-color: rgb(35, 81, 198);
+    height: 50%;
+    width: 50%;
+}
+*/
+
+
+/* SECOND BOX WITH INLINE-BLOCK — COMMENTED OUT */
+
+/*
+.second {
+    background-color: rgb(35, 81, 198);
+    height: 50%;
+    width: 50%;
+    display: inline-block;
+}
+*/
+
+
+/* FLEXBOX CONTAINER */
+
+.div {
+    background-color: rgb(146, 108, 50);
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    overflow: hidden;
+}
+
+
+/* FIRST BOX */
+
+.first {
+    position: relative;
+    top: 10%;
+    left: 10%;
+    z-index: 1;
+    background-color: aquamarine;
+    height: 50%;
+    width: 50%;
+    flex-shrink: 0;
+    border: 2px dashed black;
+}
+
+
+/* SECOND BOX */
+
+.second {
+    position: absolute;
+    top: 0%;
+    background-color: rgb(35, 81, 198);
+    height: 50%;
+    width: 50%;
+    flex-shrink: 0;
+    border: 2px dashed black;
+}
+
+
+/*
+================================================================
+PART 2: LINE-BY-LINE EXPLANATION
+================================================================
+*/
+
+
+/*
+---------------------------------------------------------------
+1. CSS SELECTOR
+---------------------------------------------------------------
+
+Definition:
+A selector selects the HTML element on which CSS is applied.
+
+Hinglish:
+Selector batata hai ki CSS kis HTML element par apply karni hai.
+
+Syntax:
+
+selector {
+    property: value;
+}
+
+Example:
+
+h1 {
+    color: blue;
+}
+
+h1       = Selector
+color    = Property
+blue     = Value
+{}       = CSS rules ka block
+;        = Declaration ka end
+
+CSS comments likhne ka syntax:
+
+/* This is a comment */
+
+Comments browser mein styling apply nahi karte.
+Ye notes aur code ko samajhne ke liye hote hain.
+*/
+
+
+/*
+---------------------------------------------------------------
+2. TAG SELECTOR
+---------------------------------------------------------------
+
+Your code:
+
+h1 {
+    color: brown;
+    background: black;
+}
+
+Definition:
+An element selector selects HTML elements by tag name.
+
+Hinglish:
+h1 selector page ke sabhi h1 elements ko select karta hai.
+
+color: brown;
+Heading ke text ka color brown hoga.
+
+background: black;
+Heading ke background ka color black hoga.
+
+background is a shorthand property.
+For a simple background color, background-color bhi use
+kar sakte hain.
+
+Example HTML:
+
+<h1>Hello World</h1>
+*/
+
+
+/*
+---------------------------------------------------------------
+3. ID SELECTOR
+---------------------------------------------------------------
+
+Your code:
+
+#heading {
+    color: red;
+    background: yellow;
+}
+
+Definition:
+An ID selector selects an element by its ID.
+
+Hinglish:
+HTML element ko di gayi ID ke liye CSS mein # lagate hain.
+
+HTML:
+<h1 id="heading">Hello</h1>
+
+#heading:
+Text red aur background yellow ho jayega.
+
+Important:
+ID normally ek page par ek unique element ko di jaati hai.
+*/
+
+
+/*
+---------------------------------------------------------------
+4. CLASS SELECTOR
+---------------------------------------------------------------
+
+Your code:
+
+.heading {
+    color: green;
+    background: blue;
+}
+
+Definition:
+A class selector selects elements by their class name.
+
+Hinglish:
+Class ke naam se elements select karne ke liye dot lagate hain.
+
+HTML:
+<h1 class="heading">Hello</h1>
+<p class="heading">Welcome</p>
+
+Dono elements ko .heading ke rules mil sakte hain.
+
+Difference:
+
+h1        = Tag selector
+#heading  = ID selector
+.heading  = Class selector
+*         = Universal selector
+*/
+
+
+/*
+---------------------------------------------------------------
+5. FONT-SIZE UNITS
+---------------------------------------------------------------
+
+Definition:
+font-size controls the size of text.
+
+Hinglish:
+Text kitna bada ya chhota dikhega, font-size batata hai.
+
+Your teacher covered:
+
+px, %, em, rem, vw, vh
+
+1. px — CSS pixels
+   Example: font-size: 20px;
+
+2. % — font size ke liye inherited font size ka percentage
+   Example: font-size: 120%;
+
+3. em — font size ke liye inherited font size ke relative
+   Example: font-size: 2em;
+
+4. rem — root html element ke font-size ke relative
+   Example: font-size: 2rem;
+
+5. vw — viewport width ka 1%
+   Example: font-size: 5vw;
+
+6. vh — viewport height ka 1%
+   Example: font-size: 5vh;
+
+Easy trick:
+
+px  = CSS pixels
+%   = Inherited font size ka percentage
+em  = Inherited font size ke relative
+rem = Root html font size ke relative
+vw  = Viewport width
+vh  = Viewport height
+
+IMPORTANT:
+em ka meaning property ke hisaab se change ho sakta hai.
+font-size property mein ye inherited font size ke relative hota hai.
+*/
+
+
+/*
+---------------------------------------------------------------
+6. BODY FONT-SIZE
+---------------------------------------------------------------
+
+Your code:
+
+body {
+    font-size: 200%;
+}
+
+Definition:
+Sets the font size of the body and provides an inherited
+font size to its children.
+
+Hinglish:
+Agar body ka inherited font size 16px hai, to 200% roughly
+32px hota hai.
+
+Actual result browser ke inherited/default font size par depend
+kar sakta hai.
+*/
+
+
+/*
+---------------------------------------------------------------
+7. ROOT FONT-SIZE
+---------------------------------------------------------------
+
+Your code:
+
+html {
+    font-size: 40px;
+}
+
+Definition:
+Sets the font size of the root HTML element.
+
+Hinglish:
+html root element hai. Iska font-size rem units ko affect karta hai.
+
+Agar html ka font-size 40px hai:
+
+1rem = 40px
+2rem = 80px
+0.5rem = 20px
+
+Beginner projects mein 16px default root size common hai.
+40px rakhne se rem-based text aur spacing kaafi badi ho sakti hai.
+*/
+
+
+/*
+---------------------------------------------------------------
+8. FONT-FAMILY
+---------------------------------------------------------------
+
+Your code:
+
+font-family: 'Courier New', Courier, monospace;
+
+Definition:
+font-family specifies the typeface used for text.
+
+Hinglish:
+Website ka text kis font style mein dikhega, ye property decide karti hai.
+
+Courier New = Monospace font
+Courier    = Fallback font
+monospace  = Generic fallback font family
+
+Other font families:
+Arial
+sans-serif
+cursive
+fantasy
+
+Agar pehla font available nahi hai, browser next font try kar sakta hai.
+*/
+
+
+/*
+---------------------------------------------------------------
+9. COLOR AND BACKGROUND
+---------------------------------------------------------------
+
+color:
+Text ka color set karta hai.
+
+background-color:
+Element ka background color set karta hai.
+
+Example:
+
+color: crimson;
+background-color: aquamarine;
+
+Color values ke examples:
+
+red
+blue
+black
+#ff0000
+rgb(255, 0, 0)
+
+RGB = Red, Green, Blue.
+Har channel ka common range 0 se 255 tak hota hai.
+*/
+
+
+/*
+---------------------------------------------------------------
+10. LETTER-SPACING
+---------------------------------------------------------------
+
+Your code:
+
+letter-spacing: 10px;
+
+Definition:
+Controls the spacing between letters.
+
+Hinglish:
+Har letter ke beech ka gap control karta hai.
+
+10px ka gap kaafi zyada ho sakta hai.
+Normal headings ke liye 1px ya 2px bhi use kar sakte hain.
+*/
+
+
+/*
+---------------------------------------------------------------
+11. TEXT-TRANSFORM
+---------------------------------------------------------------
+
+Your code:
+
+text-transform: uppercase;
+
+Definition:
+Changes the capitalization of displayed text.
+
+Hinglish:
+
+uppercase  = ALL CAPITAL LETTERS
+lowercase  = all small letters
+capitalize = Har word ka pehla letter capital
+none       = Normal text transformation
+
+Ye displayed text ko change karta hai, HTML ke original
+text content ko nahi.
+*/
+
+
+/*
+---------------------------------------------------------------
+12. PADDING
+---------------------------------------------------------------
+
+Your code:
+
+padding: 50px;
+
+Definition:
+Padding is the space between the content and the border.
+
+Hinglish:
+Content aur border ke beech ki andar wali space.
+
+padding: 50px;
+Top, right, bottom aur left sab taraf 50px padding.
+
+Examples:
+
+padding: 10px;
+All sides 10px.
+
+padding: 10px 20px;
+Top-bottom 10px, left-right 20px.
+
+padding: 10px 20px 30px 40px;
+Top, right, bottom, left.
+
+Four values ka order yaad rakho:
+TOP -> RIGHT -> BOTTOM -> LEFT
+*/
+
+
+/*
+---------------------------------------------------------------
+13. MARGIN
+---------------------------------------------------------------
+
+Your code:
+
+margin: 0px;
+
+Definition:
+Margin is the space outside an element's border.
+
+Hinglish:
+Element ke border ke bahar ki space.
+
+margin: 0px;
+All four sides ka margin zero.
+
+Difference:
+
+Padding = Border ke andar content ke aas-paas space
+Margin  = Border ke bahar elements ke beech space
+*/
+
+
+/*
+---------------------------------------------------------------
+14. HEIGHT AND WIDTH
+---------------------------------------------------------------
+
+Your code:
+
+height: 100px;
+height: 50%;
+width: 50%;
+
+height:
+Element ki height set karta hai.
+
+width:
+Element ki width set karta hai.
+
+px:
+Fixed CSS length unit.
+
+%:
+Containing block ke dimensions ke relative calculate hota hai.
+Width aur height ke percentage ka reference context alag ho sakta hai.
+
+Important:
+height: 100% tabhi expected result dega jab relevant containing
+block ki height defined ho.
+*/
+
+
+/*
+---------------------------------------------------------------
+15. UNIVERSAL SELECTOR
+---------------------------------------------------------------
+
+Your code:
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+Definition:
+The universal selector selects all elements.
+
+Hinglish:
+* ka matlab sabhi elements.
+
+Ye rule sabhi elements ka margin aur padding zero karta hai.
+
+Tumhare code mein universal selector do baar aaya hai.
+Agar same declarations repeat ho rahi hain, ek rule rakhna enough hai.
+*/
+
+
+/*
+---------------------------------------------------------------
+16. BOX-SIZING: BORDER-BOX
+---------------------------------------------------------------
+
+Your code:
+
+* {
+    box-sizing: border-box;
+}
+
+Definition:
+box-sizing determines how width and height are calculated.
+
+Default:
+content-box
+
+content-box:
+Declared width sirf content ki width hoti hai.
+Padding aur border total outer size ko badha dete hain.
+
+border-box:
+Declared width ke andar content, padding aur border count hote hain.
+
+Example:
+width: 300px;
+padding: 20px;
+border: 5px solid black;
+box-sizing: border-box;
+
+Total declared border-box width 300px rahegi.
+
+Common practice:
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+/*
+Universal selector par border-box lagana common CSS practice hai.
+*/
+
+
+/*
+---------------------------------------------------------------
+17. HTML AND BODY HEIGHT
+---------------------------------------------------------------
+
+Your code:
+
+html,
+body {
+    height: 100%;
+}
+
+Definition:
+The same height rule applies to both html and body.
+
+Hinglish:
+Comma se multiple selectors ko ek rule mein group kar sakte hain.
+
+height: 100% means containing block ki height ka 100%.
+
+Ye 100px nahi hai.
+Agar parent ki height define nahi hai, percentage height ka result
+expected tarike se nahi aa sakta.
+*/
+
+
+/*
+---------------------------------------------------------------
+18. DISPLAY: INLINE
+---------------------------------------------------------------
+
+Your commented example:
+
+display: inline;
+
+Definition:
+An inline element stays in the normal text flow.
+
+Hinglish:
+Element generally same line mein rehta hai, new line se start
+nahi karta.
+
+Normal inline elements par width aur height waise apply nahi hote
+jaise block elements par hote hain.
+
+Isliye tumhare inline example mein height: 50% aur width: 50%
+ka expected effect nahi dikhega.
+*/
+
+
+/*
+---------------------------------------------------------------
+19. DISPLAY: INLINE-BLOCK
+---------------------------------------------------------------
+
+Your commented example:
+
+display: inline-block;
+
+Definition:
+An inline-block element stays inline while allowing width and
+height to be set.
+
+Hinglish:
+Same line mein bhi reh sakta hai aur uski width/height bhi set
+kar sakte ho.
+
+Use case:
+Buttons, small boxes, labels aur inline cards.
+*/
+
+
+/*
+---------------------------------------------------------------
+20. FLEXBOX
+---------------------------------------------------------------
+
+Your code:
+
+display: flex;
+
+Definition:
+Flexbox is a CSS layout system for arranging items in a container.
+
+Hinglish:
+Flexbox se container ke andar child elements ko arrange karte hain.
+
+Parent = Flex container
+Direct children = Flex items
+
+Default flex-direction row hota hai, isliye items normally
+horizontal direction mein arrange hote hain.
+*/
+
+
+/*
+---------------------------------------------------------------
+21. FLEX-WRAP
+---------------------------------------------------------------
+
+Your code:
+
+flex-wrap: wrap;
+
+Definition:
+Allows flex items to move onto multiple lines.
+
+Hinglish:
+Agar ek line mein jagah kam ho, items next line mein ja sakte hain.
+
+Values:
+nowrap       = Items wrap nahi karte; default
+wrap         = Items next line mein ja sakte hain
+wrap-reverse = Lines reverse cross-axis order mein wrap karti hain
+*/
+
+
+/*
+---------------------------------------------------------------
+22. ALIGN-ITEMS
+---------------------------------------------------------------
+
+Your code:
+
+align-items: center;
+
+Definition:
+Aligns flex items along the cross axis.
+
+Hinglish:
+Cross axis par items ki alignment control karta hai.
+
+Default flex-direction: row mein cross axis vertical hoti hai.
+Isliye align-items: center items ko vertically center karta hai,
+available cross-axis space ke andar.
+
+Common values:
+stretch
+center
+flex-start
+flex-end
+*/
+
+
+/*
+---------------------------------------------------------------
+23. JUSTIFY-CONTENT
+---------------------------------------------------------------
+
+Your code:
+
+justify-content: space-around;
+
+Definition:
+Controls the distribution of items along the main axis.
+
+Hinglish:
+Main axis par items ko arrange karta hai aur unke around space
+distribute karta hai.
+
+Default flex-direction: row mein main axis horizontal hoti hai.
+
+Common values:
+flex-start
+center
+flex-end
+space-between
+space-around
+space-evenly
+*/
+
+
+/*
+---------------------------------------------------------------
+24. GAP
+---------------------------------------------------------------
+
+Your code:
+
+gap: 20px;
+
+Definition:
+Sets the space between layout items.
+
+Hinglish:
+Flex ya Grid items ke beech ka gap.
+
+gap: 20px;
+Items ke beech 20px spacing deta hai.
+
+Rows aur columns ke liye gap alag bhi set kar sakte hain:
+row-gap
+column-gap
+*/
+
+
+/*
+---------------------------------------------------------------
+25. OVERFLOW
+---------------------------------------------------------------
+
+Your code:
+
+overflow: hidden;
+
+Definition:
+Controls what happens when content exceeds an element's box.
+
+Hinglish:
+Jab content box mein fit nahi hota, overflow decide karta hai
+ki extra content kaise handle hoga.
+
+Common values:
+
+visible = Content bahar dikh sakta hai
+hidden  = Extra content clip hota hai
+scroll  = Scrolling available hoti hai
+auto    = Zaroorat par scrolling
+
+overflow: hidden content ko clip kar sakta hai.
+Isse har situation mein content permanently delete nahi hota.
+*/
+
+
+/*
+---------------------------------------------------------------
+26. POSITION: RELATIVE
+---------------------------------------------------------------
+
+Your code:
+
+position: relative;
+top: 10%;
+left: 10%;
+
+Definition:
+The element stays in normal flow and can be offset from its
+normal position.
+
+Hinglish:
+Element ki original space layout mein rehti hai, lekin element
+ko visually move kar sakte hain.
+
+top:
+Top offset set karta hai.
+
+left:
+Left offset set karta hai.
+
+Percentage offsets ka calculation containing block ke context
+par depend karta hai.
+*/
+
+
+/*
+---------------------------------------------------------------
+27. POSITION: ABSOLUTE
+---------------------------------------------------------------
+
+Your code:
+
+position: absolute;
+top: 0%;
+
+Definition:
+An absolutely positioned element is removed from normal flow.
+
+Hinglish:
+Element normal layout mein apni jagah reserve nahi rakhta.
+Wo nearest suitable positioned ancestor ke relative place hota hai.
+
+Example:
+*/
+
+.position-parent {
+    position: relative;
+}
+
+.position-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*
+Agar parent position: relative hai, child ka top/left generally
+usi parent ke padding box ke relative calculate hota hai.
+
+Agar suitable positioned ancestor nahi milta, initial containing
+block reference ban sakta hai.
+*/
+
+
+/*
+---------------------------------------------------------------
+28. Z-INDEX
+---------------------------------------------------------------
+
+Your code:
+
+z-index: 1;
+
+Definition:
+Controls the stacking order of overlapping elements in contexts
+where z-index applies.
+
+Hinglish:
+Jab elements overlap karte hain, z-index unka upar-neeche ka
+order control karne mein help karta hai.
+
+Same stacking context mein generally:
+z-index: 2
+z-index: 1 se upar aa sakta hai.
+
+Important:
+Stacking contexts ke kaaran z-index har situation mein globally
+compare nahi hota.
+*/
+
+
+/*
+---------------------------------------------------------------
+29. FLEX-SHRINK
+---------------------------------------------------------------
+
+Your code:
+
+flex-shrink: 0;
+
+Definition:
+Controls how much a flex item shrinks when there is not enough
+space in the flex container.
+
+Default:
+flex-shrink: 1;
+
+Hinglish:
+Jagah kam hone par flex item chhota ho sakta hai.
+
+flex-shrink: 0;
+Flex layout ki wajah se item ko shrink hone se rokta hai.
+
+Ye item ko har possible CSS situation mein fixed size ki
+guarantee nahi deta.
+*/
+
+
+/*
+---------------------------------------------------------------
+30. BORDER
+---------------------------------------------------------------
+
+Your code:
+
+border: 2px dashed black;
+
+Syntax:
+border: width style color;
+
+2px    = Border thickness
+dashed = Border style
+black  = Border color
+
+Common styles:
+solid
+dashed
+dotted
+double
+
+Example:
+border: 2px solid black;
+
+Tumhare code mein solid border commented tha aur dashed border
+active tha.
+*/
+
+
+/*
+---------------------------------------------------------------
+31. COMMENTS AND OLD CODE
+---------------------------------------------------------------
+
+Tumhare original code mein kai examples comments ke andar the.
+
+Example:
+
+/*
+.first {
+    display: inline;
+}
+*/
+
+Commented-out code browser mein apply nahi hota.
+
+Agar kisi example ko run karna hai, uske surrounding comment
+markers remove karo.
+
+Important:
+CSS comments nested nahi hote.
+Ek comment ke andar doosra comment marker use karne se confusion
+ya invalid parsing ho sakti hai.
+*/
+
+
+/*
+---------------------------------------------------------------
+32. DUPLICATE RULES AND CASCADE
+---------------------------------------------------------------
+
+Tumhare original code mein h1 aur * selectors repeat hue hain.
+
+Agar same selector, same property aur same importance ho,
+to generally baad wali declaration win karti hai.
+
+Example:
+*/
+
+.cascade-example {
+    color: blue;
+}
+
+.cascade-example {
+    color: red;
+}
+
+/*
+Final text color red hoga.
+
+Is process ko CSS cascade kehte hain.
+
+Specificity, importance, source order aur cascade layers bhi
+decide kar sakte hain ki kaunsa rule apply hoga.
+*/
+
+
+/*
+================================================================
+PART 3: ADVANCED CSS
+================================================================
+
+Ab basic concepts ke baad advanced topics ke examples.
+In classes ko HTML mein add karke practice kar sakte ho.
+*/
+
+
+/*
+---------------------------------------------------------------
+33. GROUP SELECTOR
+---------------------------------------------------------------
+
+Definition:
+Applies the same styles to multiple selectors.
+
+Hinglish:
+Ek hi CSS rule se multiple elements ko style kar sakte hain.
+*/
+
+.group-example h1,
+.group-example h2,
+.group-example p {
+    font-family: Arial, sans-serif;
+}
+
+
+/*
+---------------------------------------------------------------
+34. DESCENDANT SELECTOR
+---------------------------------------------------------------
+
+Definition:
+Selects matching elements anywhere inside another element.
+
+Hinglish:
+Parent ke andar kahin bhi maujood matching elements select hote hain.
+*/
+
+.card p {
+    color: gray;
+}
+
+/*
+.card ke andar ke sabhi descendant paragraphs select honge.
+*/
+
+
+/*
+---------------------------------------------------------------
+35. CHILD SELECTOR
+---------------------------------------------------------------
+
+Definition:
+Selects only direct children.
+
+Hinglish:
+Sirf direct child ko select karta hai, andar ke har descendant ko nahi.
+*/
+
+.card > p {
+    color: navy;
+}
+
+
+/*
+---------------------------------------------------------------
+36. ATTRIBUTE SELECTOR
+---------------------------------------------------------------
+
+Definition:
+Selects elements based on an HTML attribute.
+
+Hinglish:
+Attribute ki value ke basis par element select kar sakte hain.
+*/
+
+input[type="text"] {
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+
+/*
+---------------------------------------------------------------
+37. PSEUDO-CLASSES
+---------------------------------------------------------------
+
+Definition:
+Pseudo-classes style an element in a particular state or condition.
+
+Hinglish:
+Element ki state ya position ke basis par style lagate hain.
+*/
+
+.button-example:hover {
+    background-color: lightblue;
+}
+
+.input-example:focus {
+    outline: 2px solid blue;
+}
+
+.list-example:first-child {
+    font-weight: bold;
+}
+
+.list-example:last-child {
+    color: crimson;
+}
+
+/*
+:hover  = Mouse pointer element par
+:focus  = Element focused hai
+:first-child = Parent ka pehla child
+:last-child  = Parent ka aakhri child
+*/
+
+
+/*
+---------------------------------------------------------------
+38. PSEUDO-ELEMENTS
+---------------------------------------------------------------
+
+Definition:
+Pseudo-elements style a specific part of an element or create
+generated content.
+
+Hinglish:
+Element ke kisi specific part ko style kar sakte hain.
+*/
+
+.paragraph-example::first-letter {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.badge-example::before {
+    content: "NEW ";
+    color: green;
+}
+
+/*
+::first-letter = Pehle letter ko style karta hai
+::before = Content se pehle generated content add karta hai
+
+content property pseudo-element ke liye important hai.
+*/
+
+
+/*
+---------------------------------------------------------------
+39. TRANSITIONS
+---------------------------------------------------------------
+
+Definition:
+A transition animates a property change over a period of time.
+
+Hinglish:
+Jab property change hoti hai, transition change ko smooth banata hai.
+*/
+
+.transition-button {
+    background-color: blue;
+    color: white;
+    padding: 12px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.transition-button:hover {
+    background-color: purple;
+}
+
+/*
+0.3s = Transition duration
+ease = Speed ka gradual pattern
+*/
+
+
+/*
+---------------------------------------------------------------
+40. TRANSFORMS
+---------------------------------------------------------------
+
+Definition:
+transform changes an element's visual position, rotation,
+scale or skew.
+
+Hinglish:
+Element ko move, rotate ya bada-chhota kar sakte hain.
+*/
+
+.transform-box:hover {
+    transform: scale(1.05);
+}
+
+.rotate-box {
+    transform: rotate(10deg);
+}
+
+/*
+scale(1.05) = 5% larger visual scale
+rotate(10deg) = 10 degrees rotation
+*/
+
+
+/*
+---------------------------------------------------------------
+41. CSS ANIMATIONS
+---------------------------------------------------------------
+
+Definition:
+Animations change CSS properties through keyframes.
+
+Hinglish:
+Keyframes mein define karte hain ki animation ke different
+stages par element kaisa dikhega.
+*/
+
+@keyframes move-box {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100px);
+    }
+}
+
+.animated-box {
+    animation: move-box 2s ease-in-out infinite alternate;
+}
+
+/*
+move-box = Animation ka naam
+2s = Duration
+infinite = Animation repeat hoti rahegi
+alternate = Forward aur reverse direction mein chalegi
+
+Respect prefers-reduced-motion when designing accessible pages.
+*/
+
+
+/*
+---------------------------------------------------------------
+42. CSS VARIABLES
+---------------------------------------------------------------
+
+Definition:
+CSS custom properties store reusable values.
+
+Hinglish:
+Ek value ko variable mein store karke baar-baar use kar sakte hain.
+*/
+
+:root {
+    --main-color: #2563eb;
+    --text-color: #222222;
+    --space: 16px;
+}
+
+.variable-example {
+    color: var(--text-color);
+    background-color: var(--main-color);
+    padding: var(--space);
+}
+
+/*
+--main-color = Custom property
+var(--main-color) = Variable ki value use karta hai
+
+:root commonly page-wide variables store karne ke liye use hota hai.
+*/
+
+
+/*
+---------------------------------------------------------------
+43. FLEXBOX ADVANCED
+---------------------------------------------------------------
+
+flex-direction:
+Items ki direction set karta hai.
+
+flex-grow:
+Available extra space ko items ke beech distribute karta hai.
+
+flex-basis:
+Flex layout mein item ka initial main size set karta hai.
+*/
+
+.flex-advanced {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.flex-grow-example {
+    flex-grow: 1;
+}
+
+.flex-basis-example {
+    flex-basis: 200px;
+}
+
+/*
+flex-direction values:
+row
+row-reverse
+column
+column-reverse
+
+flex-grow: 1 ka matlab item available extra space share kar sakta hai.
+*/
+
+
+/*
+---------------------------------------------------------------
+44. CSS GRID
+---------------------------------------------------------------
+
+Definition:
+CSS Grid is a two-dimensional layout system for rows and columns.
+
+Hinglish:
+Grid se rows aur columns dono mein layout bana sakte hain.
+*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.grid-item {
+    padding: 20px;
+    background-color: lightblue;
+}
+
+/*
+repeat(3, 1fr) = 3 equal-width columns
+
+fr = Grid container ke available space ka fraction
+gap = Grid items ke beech spacing
+*/
+
+
+/*
+---------------------------------------------------------------
+45. RESPONSIVE DESIGN
+---------------------------------------------------------------
+
+Definition:
+Responsive design helps a webpage adapt to different screen sizes.
+
+Hinglish:
+Website mobile, tablet aur desktop par properly display ho,
+iske liye responsive CSS use karte hain.
+*/
+
+.responsive-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+/*
+Media query:
+Screen width ke basis par CSS rules apply kar sakte hain.
+*/
+
+@media (max-width: 768px) {
+    .responsive-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*
+768px ya usse chhoti viewport par one-column layout hoga.
+*/
+
+
+/*
+---------------------------------------------------------------
+46. CSS FUNCTIONS
+---------------------------------------------------------------
+
+calc():
+Different units ke saath calculations karta hai.
+
+min():
+Di gayi values mein smallest value return karta hai.
+
+max():
+Di gayi values mein largest value return karta hai.
+
+clamp():
+Minimum, preferred aur maximum value define karta hai.
+*/
+
+.calculation-example {
+    width: calc(100% - 40px);
+    padding: 16px;
+}
+
+.responsive-text {
+    font-size: clamp(16px, 3vw, 32px);
+}
+
+/*
+clamp(16px, 3vw, 32px):
+
+Minimum = 16px
+Preferred = 3vw
+Maximum = 32px
+*/
+
+
+/*
+---------------------------------------------------------------
+47. BORDER-RADIUS AND SHADOW
+---------------------------------------------------------------
+
+border-radius:
+Element ke corners rounded banata hai.
+
+box-shadow:
+Element ke around shadow add karta hai.
+*/
+
+.rounded-card {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+    padding: 20px;
+}
+
+/*
+12px = Corner rounding
+box-shadow values commonly:
+horizontal offset
+vertical offset
+blur radius
+color
+*/
+
+
+/*
+---------------------------------------------------------------
+48. OBJECT-FIT
+---------------------------------------------------------------
+
+Definition:
+object-fit controls how replaced content such as an image
+fits inside its box.
+
+Hinglish:
+Image ko fixed-size box mein kaise fit karna hai.
+*/
+
+.image-example {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/*
+cover = Box fill hota hai; image ka kuch part crop ho sakta hai.
+contain = Puri image visible rehti hai; empty space ho sakti hai.
+*/
+
+
+/*
+---------------------------------------------------------------
+49. OVERFLOW-X AND OVERFLOW-Y
+---------------------------------------------------------------
+
+Definition:
+These properties control horizontal and vertical overflow
+separately.
+
+Hinglish:
+Horizontal aur vertical direction ki scrolling ko alag control
+kar sakte hain.
+*/
+
+.scroll-example {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+
+/*
+---------------------------------------------------------------
+50. POSITION: FIXED AND STICKY
+---------------------------------------------------------------
+
+fixed:
+Element generally viewport ke relative position hota hai.
+
+sticky:
+Element normal flow mein rehta hai aur scrolling ke dauran
+specified threshold par stick kar sakta hai.
+*/
+
+.fixed-example {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.sticky-example {
+    position: sticky;
+    top: 0;
+}
+
+/*
+Sticky behavior ke liye scrolling container aur available space
+jaise layout factors bhi matter karte hain.
+*/
+
+
+/*
+---------------------------------------------------------------
+51. SPECIFICITY
+---------------------------------------------------------------
+
+Definition:
+Specificity helps determine which selector wins when
+conflicting declarations apply.
+
+General comparison:
+
+Element selector -> Lower specificity
+Class selector  -> Higher than element
+ID selector     -> Higher than class
+
+Example:
+*/
+
+p {
+    color: blue;
+}
+
+.special-text {
+    color: green;
+}
+
+#unique-text {
+    color: red;
+}
+
+/*
+Agar ek hi paragraph par teeno rules apply hon,
+to #unique-text ki color declaration generally win karegi.
+
+Cascade layers, importance aur other cascade rules bhi matter karte hain.
+*/
+
+
+/*
+---------------------------------------------------------------
+52. ACCESSIBILITY AND FOCUS
+---------------------------------------------------------------
+
+Definition:
+Accessible CSS helps more people use a webpage.
+
+Hinglish:
+Website keyboard aur different needs wale users ke liye bhi
+usable honi chahiye.
+*/
+
+.accessible-button:focus-visible {
+    outline: 3px solid blue;
+    outline-offset: 3px;
+}
+
+/*
+Keyboard focus indicator ko bina reason remove mat karo.
+Text aur background mein sufficient contrast rakho.
+*/
+
+
+/*
+================================================================
+PART 4: FINAL REVISION
+================================================================
+
+SELECTORS
+h1         = Tag selector
+#heading   = ID selector
+.heading   = Class selector
+*          = Universal selector
+.card p    = Descendant selector
+.card > p  = Direct child selector
+
+TEXT
+color            = Text color
+font-size        = Text size
+font-family      = Font type
+letter-spacing   = Letter spacing
+text-transform   = Text capitalization
+
+UNITS
+px  = CSS pixels
+%   = Percentage
+em  = Inherited font size ke relative for font-size
+rem = Root font size ke relative
+vw  = Viewport width ka 1%
+vh  = Viewport height ka 1%
+
+BOX MODEL
+content  = Actual content
+padding  = Content aur border ke beech
+border   = Boundary
+margin   = Border ke bahar space
+
+LAYOUT
+display: inline       = Inline flow
+display: inline-block = Inline + controllable dimensions
+display: flex         = Flexbox layout
+display: grid         = Grid layout
+gap                   = Items ke beech space
+
+FLEXBOX -
+flex-wrap
+align-items
+justify-content
+flex-grow
+flex-shrink
+flex-basis
+flex-direction
+
+POSITION - 
+static
+relative
+absolute
+fixed
+sticky
+
+
+top
+left
+right
+bottom
+z-index
+
+
+OTHER IMPORTANT TOPICS
+overflow
+border-radius
+box-shadow
+transition
+transform
+animation
+CSS variables
+media queries
+calc()
+min()
+max()
+clamp()
+
+
+
+END OF CSS NOTES
+================================================================
+*/
