@@ -68,8 +68,3 @@ var c = 80;
 console.log(a);
 console.log(b);
 console.log(c);
-
-
-
-
-

@@ -26,6 +26,7 @@ JavaScript has three keywords:
 3. const
 
 
+
 ----------------------------------------
 A. var
 ----------------------------------------
@@ -47,7 +48,9 @@ var a = 20;
 Reassignment:
 a = 50;
 
-Example:
+
+
+Example:-
 
 var a = 20;
 console.log(a);
@@ -59,6 +62,7 @@ Redeclaration:
 
 var a = 100;
 console.log(a);
+
 
 
 ----------------------------------------
@@ -82,6 +86,8 @@ let b = 10;
 Reassignment:
 b = 30;
 
+
+
 Example:
 
 let b = 10;
@@ -104,12 +110,14 @@ C. const
 Declaration + Initialization:
 const c = 80;
 
+
+
 Example:
 
 const c = 80;
 console.log(c);
 
-// c = 100;  // Error
+! c = 100;  // Error
 
 
 ----------------------------------------
@@ -165,100 +173,103 @@ const:
 */
 
 
+var a = 10;
+var b = 20;
 
-// var a = 10;
-// var b = 20;
-
-// console.log(a,b);
-
-
-
-// var a = 100;
-// var a = 40;
-
-// console.log(a);
+console.log(a,b);
 
 
 
+var a = 100;
+var a = 40;
 
-// var b;
-// console.log(b);      // Undefined
-
-
-// var a = 10;
-// let b = 60;
-
-// console.log(b);
+console.log(a);
 
 
 
 
-// let b ;
-// console.log(b);       // undefined
+var b;
+console.log(b);      // Undefined
 
 
 
-// let b = 60;
-// let b = 100;
 
-// console.log(b);        // Not Possible ( Redeclaration )
+var a = 10;
+let b = 60;
+
+console.log(b);
+
+
+
+
+let b ;
+console.log(b);       // Undefined
+
+
+
+
+let b = 60;
+let b = 100;
+
+console.log(b);        // Not Possible ( Redeclaration )
+
 
 
 
 // Updatation - 
 
-// var a = 10;
-// a = 50 ;
+var a = 10;
+a = 50 ;
 
-// console.log(a);
-
-
-
-// let a = 10;
-// a = 50 ;
-
-// console.log(a);
+console.log(a);
 
 
 
+let a = 10;
+a = 50 ;
 
-
-
-// console.log(a);
-// var a = 50 ;
-
-// Undefined
-
-
-// console.log(a);
-// let a = 50 ;
-
-// Cannot access 'a' before initialization
-
-
-
-// console.log(a);
-// a is not defined
-
-
-
-
-// var a = 10;
-// console.log(window);
-
-
-// let a = 10;
-// console.log(window);
+console.log(a);
 
 
 
 
 
-// const a = 90;
-// a = 80;
-// console.log(a);
 
-// Assignment to constant variable.
+console.log(a);
+var a = 50 ;          // Undefined
+
+
+
+
+
+console.log(a);
+let a = 50 ;           // Cannot access 'a' before initialization
+
+
+
+
+
+console.log(a);        // a is not defined
+
+
+
+
+
+var a = 10;
+console.log(window);
+
+
+let a = 10;
+console.log(window);
+
+
+
+
+
+const a = 90;
+a = 80;
+console.log(a);       // Assignment to constant variable.
+
 
 
 
@@ -277,6 +288,8 @@ const:
 console.log(b);
 console.log(c);           // c is not defined
 console.log(ab);          // ab is not defined
+
+
 
 
 
@@ -350,8 +363,8 @@ Example:
 
 console.log(a);  // 10
 
-// console.log(b); // Error
-// console.log(c); // Error
+! console.log(b); // Error
+! console.log(c); // Error
 
 IMPORTANT:
 
@@ -370,7 +383,7 @@ can only be accessed inside that function.
 var, let and const all have function scope
 when declared inside a function.
 
-Example:
+Example:-
 
 function display() {
 
@@ -385,9 +398,9 @@ function display() {
 
 display();
 
-// console.log(a); // Error
-// console.log(b); // Error
-// console.log(c); // Error
+! console.log(a); // Error
+! console.log(b); // Error
+! console.log(c); // Error
 
 
 ================================================
@@ -425,18 +438,12 @@ Function Scope    Yes       Yes        Yes
 ================================================
 
 1. Scope decides where a variable can be used.
-
 2. var is function scoped, not block scoped.
-
 3. let and const are block scoped.
-
 4. Variables declared inside a function
    cannot be accessed outside that function.
-
 5. A global variable can be accessed inside
    functions and blocks in its scope.
 
-
 */
-
 
